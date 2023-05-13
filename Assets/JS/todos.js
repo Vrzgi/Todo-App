@@ -1,5 +1,5 @@
 //Check off Specific To-Do by Clicking
-$("li").click(function(){
+$("ul").on("click","li",function(){
     $(this).toggleClass("complated");
     /*
     //if <li> is grey
@@ -20,10 +20,21 @@ $("li").click(function(){
     */
 });
 //Click on X to delete To-Do
-$("span").click(function(event){
+$("ul").on("click","span",function(event){
     $(this).parent().fadeOut(500,function(){
         $(this).remove();
     });
     event.stopPropagation();
-    
+});
+$("input[type='text'").keypress(function(event){
+    //console.log("Key Pressed !")
+    //check enter
+    if(event.which === 13){
+        //console.log("You Press ENTER !");
+        //grabbing new todo text from input
+        var todoText = $(this).val();
+        $(this).val(""); //empty after each add
+        //create a new li and add to ul
+        $("ul").append("<li><span>X</span> " + todoText +"</li>");
+    }
 });
