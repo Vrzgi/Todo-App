@@ -2,7 +2,7 @@
 
 Simple To-Do List web page.
 
-## Table of Contents
+## Contents
 
 - [Project Description](#project-description)
 - [Usage](#usage)
