@@ -14,7 +14,7 @@ A simple webpage for making a To-Do list
 
 ## Usage
 
-Jquery + HTML + CSS
+Jquery + HTML + CSS.
 
 
 
